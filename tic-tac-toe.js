@@ -3,7 +3,7 @@ let currentPlayer = 'X';
 let isGameActive = true;
 
 const messageElement = document.getElementById('message');
-const buttonElement = document.getElementById('restartButton');
+const buttonElement = document.getElementById('btn__restart');
 
 const winnerConditions = [
   [0, 1, 2],
@@ -19,7 +19,7 @@ const winnerConditions = [
 function makeMove(index) {
   if (board[index] !== '' || !isGameActive) return;
   board[index] = currentPlayer;
-  document.getElementById(`cell-${index}`).innerHTML = currentPlayer;
+  document.getElementById(`board__cell-${index}`).innerHTML = currentPlayer;
 
   helperFunction();
 }
@@ -59,7 +59,7 @@ function helperFunction() {
 
 function gameRestart() {
   for(let i = 0; i <= 8; i++) {
-    document.getElementById(`cell-${i}`).innerHTML = '';
+    document.getElementById(`board__cell-${i}`).innerHTML = '';
   }
   board = ['', '', '', '', '', '', '', '', ''];
   currentPlayer = 'X';
