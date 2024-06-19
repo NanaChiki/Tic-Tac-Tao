@@ -2,7 +2,7 @@ let board = ['', '', '', '', '', '', '', '', ''];
 let currentPlayer = 'X';
 let isGameActive = true;
 
-const messageElement = document.getElementById('message');
+const messageElement = document.getElementById('info__message');
 const buttonElement = document.getElementById('btn__restart');
 
 const winnerConditions = [
